@@ -12,7 +12,10 @@ import os
 import subprocess
 import sys
 
-SEMGREP_CONFIGS = ["p/security-audit", "p/owasp-top-ten"]
+SEMGREP_CONFIGS = ["p/security-audit", "p/owasp-top-ten", "p/python", "p/secrets"]
+# p/python: generic Python rules (e.g. formatted-SQL-query, eval detection)
+#           not covered by the more framework-specific security-audit/owasp packs.
+# p/secrets: dedicated hardcoded-credential/API-key detection rules.
 OUTPUT_PATH = "semgrep-report.json"
 
 

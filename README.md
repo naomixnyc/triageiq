@@ -55,6 +55,9 @@ triage_engine.py ──► prompt_builder.py builds prompt w/ code context
 ## Setup
 See [SETUP.md](SETUP.md) for full step-by-step setup instructions, including how to add your `GEMINI_API_KEY` as a GitHub Actions secret.
 
+## Lessons Learned
+See [LEARNINGS.md](LEARNINGS.md) for a real issue found during testing (initial ruleset config only caught 1 of 3 planted demo vulnerabilities) and what it revealed about ruleset coverage, rule evasion, and why the AI triage layer matters more as you add more rulesets.
+
 ## Repository Structure
 ```
 triageiq/
