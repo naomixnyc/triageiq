@@ -15,12 +15,6 @@ Static analysis tools like Semgrep are powerful but produce high false-positive 
 - Posts a single, prioritized PR comment — critical issues first, noise filtered out
 - Fails the build only on confirmed high-severity issues, not every low-signal finding
 
-## Skills Demonstrated
-- Static Application Security Testing (SAST) pipeline design
-- LLM integration for security triage (prompt engineering, structured JSON output, API error handling)
-- CI/CD security gating (GitHub Actions)
-- Reducing alert fatigue — a real, named problem in the AppSec industry
-
 ## Demo
 [Screenshot: before/after — raw Semgrep JSON vs. TriageIQ's prioritized PR comment]
 
@@ -56,7 +50,7 @@ triage_engine.py ──► prompt_builder.py builds prompt w/ code context
 See [SETUP.md](SETUP.md) for full step-by-step setup instructions, including how to add your `GEMINI_API_KEY` as a GitHub Actions secret.
 
 ## Lessons Learned
-See [LEARNINGS.md](LEARNINGS.md) for a real issue found during testing (initial ruleset config only caught 1 of 3 planted demo vulnerabilities) and what it revealed about ruleset coverage, rule evasion, and why the AI triage layer matters more as you add more rulesets.
+See [LEARNINGS.md](LEARNINGS.md) — a short note on a real ruleset-coverage gap found during testing and how it was fixed.
 
 ## Repository Structure
 ```
@@ -79,5 +73,4 @@ triageiq/
 └── LICENSE
 ```
 
-## Portfolio Note
-This project pairs with a SOC Triage Assistant project: both apply LLMs to reduce alert fatigue in security workflows — one for SOC analysts triaging live alerts, one for developers triaging static analysis findings in CI.
+Related: a SOC Triage Assistant project applies the same triage approach to live security alerts instead of static analysis findings.
