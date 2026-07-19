@@ -10,12 +10,16 @@ Intentional vulnerabilities included:
   1. SQL injection via string formatting (line ~24)
   2. Hardcoded secret / API key (line ~10)
   3. Unsanitized eval() of user input (line ~34)
+
+Note: the original ruleset config (p/security-audit + p/owasp-top-ten only)
+caught only #3 on first test. See ../LEARNINGS.md for why, and what
+changed (added p/python + p/secrets rulesets).
 """
 
 import sqlite3
 
 # --- 2. Hardcoded secret (intentional, for demo) ---------------------------
-API_KEY = "sk-live-51Hc8T2eZvKYlo2C0demoKEYdoNOTuse0000000000"  # noqa: S105
+API_KEY = "sk_live_51Hc8T2eZvKYlo2C0demoKEYdoNOTuse0000000000"  # noqa: S105
 
 
 def get_user_by_username(username: str):
