@@ -1,10 +1,5 @@
 # SETUP.md — TriageIQ Setup Guide
  
-This guide assumes you're comfortable with basic Git commands but new to
-GitHub Actions / Secrets. Every step below is click-by-click.
- 
----
- 
 ## 1. Prerequisites
 - A GitHub account
 - A repo you can push to (this repo, or your own fork/copy of it)
